@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ta">
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face { font-family: "Heading"; src: url("https://tlauom.com/fonts/Heading.ttf"); }
+  @font-face { font-family: "Para"; src: url("https://tlauom.com/fonts/Para.ttf"); }
+  :root {
+    --navy: #0c1d3b;
+    --navy-2: #142b55;
+    --gold: #e0b45a;
+    --gold-2: #f6dc9a;
+    --cream: #f7efe0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1280px; height: 400px; background: transparent; }
+  .banner {
+    position: relative; width: 1280px; height: 400px; overflow: hidden;
+    border-radius: 22px;
+    background:
+      radial-gradient(ellipse 520px 300px at 210px 200px, rgba(224,180,90,.22), transparent 70%),
+      radial-gradient(ellipse 600px 380px at 1130px 220px, rgba(70,120,200,.28), transparent 70%),
+      linear-gradient(120deg, var(--navy) 0%, var(--navy-2) 55%, #0a1730 100%);
+    font-family: "Para", "Nirmala UI", sans-serif;
+    color: var(--cream);
+  }
+  /* kolam dot grid with looping arcs */
+  .kolam { position: absolute; inset: 0; opacity: .16; }
+  .frame {
+    position: absolute; inset: 14px; border-radius: 14px;
+    border: 1.5px solid rgba(224,180,90,.55);
+    box-shadow: inset 0 0 0 5px rgba(12,29,59,.0), inset 0 0 0 6.5px rgba(224,180,90,.22);
+  }
+  .crest {
+    position: absolute; left: 70px; top: 50%; transform: translateY(-50%);
+    width: 270px; height: 270px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: radial-gradient(circle, rgba(246,220,154,.35), rgba(246,220,154,0) 68%);
+  }
+  .crest img { width: 236px; filter: drop-shadow(0 10px 24px rgba(0,0,0,.45)); }
+  .text { position: absolute; left: 380px; top: 74px; width: 560px; }
+  .ta {
+    font-family: "Heading", "Nirmala UI", serif; font-size: 60px; line-height: 1.15;
+    background: linear-gradient(180deg, var(--gold-2), var(--gold) 60%, #b98a33);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 3px 0 rgba(0,0,0,.25));
+    white-space: nowrap;
+  }
+  .rule { display: flex; align-items: center; gap: 12px; margin: 16px 0 14px; }
+  .rule span { height: 1.5px; width: 120px; background: linear-gradient(90deg, var(--gold), transparent); }
+  .rule i { width: 9px; height: 9px; transform: rotate(45deg); background: var(--gold); }
+  .en {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 27px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: var(--cream);
+  }
+  .uni {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px; letter-spacing: 2.5px; color: rgba(247,239,224,.72); margin-top: 8px;
+  }
+  .chips { display: flex; gap: 10px; margin-top: 26px; }
+  .chips b {
+    font-weight: normal; font-size: 19px; padding: 7px 16px 6px; border-radius: 999px;
+    border: 1px solid rgba(224,180,90,.6); color: var(--gold-2); background: rgba(224,180,90,.08);
+  }
+  .rosette {
+    position: absolute; right: -130px; top: 50%; transform: translateY(-50%);
+    opacity: .55;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+            mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+  }
+  .url {
+    position: absolute; right: 44px; bottom: 30px;
+    font-family: "Segoe UI", Arial, sans-serif; font-size: 15px; letter-spacing: 3px; color: rgba(246,220,154,.85);
+  }
+</style>
+</head>
+<body>
+<div class="banner">
+  <svg class="kolam" width="1280" height="400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="k" width="64" height="64" patternUnits="userSpaceOnUse">
+        <circle cx="32" cy="32" r="2.4" fill="#e0b45a" />
+        <circle cx="0" cy="0" r="2.4" fill="#e0b45a" />
+        <circle cx="64" cy="0" r="2.4" fill="#e0b45a" />
+        <circle cx="0" cy="64" r="2.4" fill="#e0b45a" />
+        <circle cx="64" cy="64" r="2.4" fill="#e0b45a" />
+        <path d="M32 10 C46 10 54 18 54 32 C54 46 46 54 32 54 C18 54 10 46 10 32 C10 18 18 10 32 10 Z"
+              fill="none" stroke="#e0b45a" stroke-width="1.1" />
+        <path d="M0 32 Q16 16 32 32 T64 32" fill="none" stroke="#e0b45a" stroke-width="1" />
+      </pattern>
+      <linearGradient id="fade" x1="0" x2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity="1" />
+        <stop offset=".45" stop-color="#fff" stop-opacity=".15" />
+        <stop offset=".75" stop-color="#fff" stop-opacity=".15" />
+        <stop offset="1" stop-color="#fff" stop-opacity="1" />
+      </linearGradient>
+      <mask id="m"><rect width="1280" height="400" fill="url(#fade)" /></mask>
+    </defs>
+    <rect width="1280" height="400" fill="url(#k)" mask="url(#m)" />
+  </svg>
+  <div class="frame"></div>
+
+  <div class="crest"><img src="brand/logo.png" alt="" /></div>
+
+  <div class="text">
+    <div class="ta">தமிழ் இலக்கிய மன்றம்</div>
+    <div class="rule"><span></span><i></i><span style="transform:scaleX(-1)"></span></div>
+    <div class="en">Tamil Literary Association</div>
+    <div class="uni">UNIVERSITY OF MORATUWA · SRI LANKA</div>
+    <div class="chips"><b>மொழி</b><b>இலக்கியம்</b><b>கலை</b><b>பண்பாடு</b></div>
+  </div>
+
+  <svg class="rosette" width="520" height="520" viewBox="-260 -260 520 520" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#e0b45a" stroke-linecap="round">
+      <circle r="250" stroke-width="1" opacity=".5" />
+      <circle r="236" stroke-width="2.5" stroke-dasharray="1 13" opacity=".9" />
+      <circle r="205" stroke-width="1.2" opacity=".6" />
+      <g id="outer" stroke-width="1.6">
+        <path d="M0 -200 C34 -160 34 -120 0 -92 C-34 -120 -34 -160 0 -200 Z" />
+        <path d="M0 -182 C18 -156 18 -130 0 -110 C-18 -130 -18 -156 0 -182 Z" opacity=".7" />
+      </g>
+      <use href="#outer" transform="rotate(30)" /><use href="#outer" transform="rotate(60)" />
+      <use href="#outer" transform="rotate(90)" /><use href="#outer" transform="rotate(120)" />
+      <use href="#outer" transform="rotate(150)" /><use href="#outer" transform="rotate(180)" />
+      <use href="#outer" transform="rotate(210)" /><use href="#outer" transform="rotate(240)" />
+      <use href="#outer" transform="rotate(270)" /><use href="#outer" transform="rotate(300)" />
+      <use href="#outer" transform="rotate(330)" />
+      <g id="inner" stroke-width="1.8">
+        <path d="M0 -92 C40 -70 40 -30 0 -10 C-40 -30 -40 -70 0 -92 Z" />
+      </g>
+      <use href="#inner" transform="rotate(45)" /><use href="#inner" transform="rotate(90)" />
+      <use href="#inner" transform="rotate(135)" /><use href="#inner" transform="rotate(180)" />
+      <use href="#inner" transform="rotate(225)" /><use href="#inner" transform="rotate(270)" />
+      <use href="#inner" transform="rotate(315)" />
+      <circle r="92" stroke-width="1.2" opacity=".7" />
+      <circle r="14" stroke-width="2" />
+      <circle r="5" fill="#e0b45a" stroke="none" />
+    </g>
+  </svg>
+  <div class="url">TLAUOM.COM</div>
+</div>
+</body>
+</html>

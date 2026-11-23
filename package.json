@@ -1,0 +1,14 @@
+{
+  "name": "tla-org-profile",
+  "private": true,
+  "description": "Builds the Tamil Literary Association GitHub profile images from the live website.",
+  "type": "module",
+  "scripts": {
+    "capture": "node scripts/capture.mjs"
+  },
+  "dependencies": {
+    "gifenc": "^1.0.3",
+    "playwright": "1.65.1",
+    "pngjs": "^7.0.0"
+  }
+}

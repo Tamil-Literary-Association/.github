@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ta">
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face { font-family: "Para"; src: url("https://tlauom.com/fonts/Para.ttf"); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 660px; background: #0c1d3b; }
+  .stage {
+    position: relative; width: 1200px; height: 660px; overflow: hidden;
+    background:
+      radial-gradient(ellipse 700px 420px at 380px 330px, rgba(70,120,200,.30), transparent 70%),
+      radial-gradient(ellipse 380px 300px at 1010px 420px, rgba(224,180,90,.20), transparent 70%),
+      linear-gradient(130deg, #0c1d3b, #142b55 60%, #0a1730);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+  .dots { position: absolute; inset: 0; opacity: .12; }
+
+  /* desktop browser window: 1280x800 page shown at 0.66 */
+  .browser {
+    position: absolute; left: 44px; top: 58px; width: 845px;
+    border-radius: 12px; overflow: hidden; background: #1b2436;
+    box-shadow: 0 30px 70px rgba(0,0,0,.55), 0 0 0 1px rgba(224,180,90,.35);
+  }
+  .bar { height: 36px; display: flex; align-items: center; gap: 8px; padding: 0 14px; background: #222d42; }
+  .bar i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+  .addr {
+    margin-left: 18px; flex: 1; height: 22px; border-radius: 11px; background: #131b2b;
+    color: #c9d3e6; font-size: 12.5px; display: flex; align-items: center; padding: 0 12px; gap: 7px;
+  }
+  .addr svg { flex: none; }
+  .browser .screen { width: 845px; height: 528px; display: block; object-fit: cover; object-position: top; background: #fff; }
+
+  /* phone: 390x844 page shown at ~0.6 */
+  .phone {
+    position: absolute; right: 70px; top: 96px; width: 258px; height: 534px;
+    border-radius: 38px; background: #0a0f1a; padding: 11px;
+    box-shadow: 0 30px 70px rgba(0,0,0,.6), 0 0 0 2px rgba(224,180,90,.55), inset 0 0 0 2px #2a3550;
+  }
+  .phone .inner { width: 236px; height: 512px; border-radius: 28px; overflow: hidden; background: #fff; }
+  .status {
+    height: 22px; padding: 0 20px 0 24px; display: flex; align-items: center; justify-content: space-between;
+    font-size: 10.5px; font-weight: 700; color: #0c1d3b; background: #fff;
+  }
+  .status span:last-child { letter-spacing: 1px; font-size: 9px; }
+  /* 236x490 shows a 390x810 phone viewport */
+  .phone .screen { width: 236px; height: 490px; display: block; object-fit: cover; object-position: top; }
+  .notch {
+    position: absolute; top: 15px; left: 50%; transform: translateX(-50%);
+    width: 70px; height: 18px; border-radius: 10px; background: #0a0f1a;
+  }
+
+  .live {
+    position: absolute; left: 44px; top: 16px; display: flex; align-items: center; gap: 9px;
+    color: #f7efe0; font-size: 14px; letter-spacing: 2.5px; font-weight: 600;
+  }
+  .live .dot { width: 10px; height: 10px; border-radius: 50%; background: #ff4d4d; box-shadow: 0 0 0 4px rgba(255,77,77,.25); }
+  .live .ta { font-family: "Para", "Nirmala UI", sans-serif; letter-spacing: 0; font-weight: normal; color: #f6dc9a; font-size: 15px; }
+  .stamp { position: absolute; right: 72px; top: 20px; color: rgba(246,220,154,.8); font-size: 12.5px; letter-spacing: 1.5px; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <svg class="dots" width="1200" height="660" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="k" width="48" height="48" patternUnits="userSpaceOnUse">
+        <circle cx="24" cy="24" r="2" fill="#e0b45a" />
+        <path d="M24 8 C35 8 40 13 40 24 C40 35 35 40 24 40 C13 40 8 35 8 24 C8 13 13 8 24 8 Z" fill="none" stroke="#e0b45a" stroke-width=".9" />
+      </pattern>
+    </defs>
+    <rect width="1200" height="660" fill="url(#k)" />
+  </svg>
+
+  <div class="live"><span class="dot"></span>LIVE <span class="ta">· நேரலை</span></div>
+  <div class="stamp" id="stamp"></div>
+
+  <div class="browser">
+    <div class="bar">
+      <i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i>
+      <div class="addr">
+        <svg width="11" height="12" viewBox="0 0 11 12"><rect x="1" y="5" width="9" height="7" rx="1.5" fill="#7fd18b"/><path d="M3 5V3.5a2.5 2.5 0 0 1 5 0V5" stroke="#7fd18b" stroke-width="1.4" fill="none"/></svg>
+        <span id="addr">tlauom.com</span>
+      </div>
+    </div>
+    <img class="screen" id="desktop" alt="" />
+  </div>
+
+  <div class="phone">
+    <div class="inner">
+      <div class="status"><span>9:41</span><span>▮▮▮ ◉</span></div>
+      <img class="screen" id="mobile" alt="" />
+    </div>
+    <div class="notch"></div>
+  </div>
+</div>
+</body>
+</html>
