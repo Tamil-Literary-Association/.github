@@ -16,8 +16,8 @@ records the home page on a laptop and a phone, takes screenshots of the main pag
 It runs every Monday, after any change to `scripts/`, and on demand from the
 **Actions** tab (**Refresh profile pictures → Run workflow**).
 
-The event pictures under "What we do" are loaded straight from `tlauom.com/og/`, so they change as
-soon as the website does.
+The event pictures under "What we do" are copied from `tlauom.com/og/` on each run (GitHub's image
+proxy sometimes fails to load pictures from other sites).
 
 ## Running it on your own computer
 

@@ -2,6 +2,7 @@
 //   profile/assets/banner.png          – the header banner (rendered from banner.html)
 //   profile/assets/live-preview.gif    – laptop + phone scrolling through the home page
 //   profile/assets/pages/<name>.jpg    – thumbnails of the main pages
+//   profile/assets/events/<name>.jpg   – copies of the website's event pictures (/og/<name>.jpg)
 // and stamps the capture date into profile/README.md.
 //
 // Run:  npm ci && npx playwright install chromium && npm run capture
@@ -34,7 +35,15 @@ const PAGES = [
   { file: "intro", path: "/intro" },
 ];
 
-const FRAMES = 40;          // scrolling frames in the GIF
+// Event pictures for the "What we do" grid. They are copied into this repository
+// because GitHub's image proxy sometimes fails to fetch them from tlauom.com.
+const EVENTS = [
+  "thamilaruvi", "sotkanai", "brammam",
+  "ideathon", "jeevanathi", "blood-donation",
+  "vani-villa", "thaipongal", "aramiyam",
+];
+
+const FRAMES = 40;         // scrolling frames in the GIF
 const FRAME_DELAY = 110;    // ms per scrolling frame
 const HOLD_START = 2200;    // ms on the first frame
 const HOLD_END = 1400;      // ms on the last frame
@@ -168,6 +177,22 @@ async function renderPages(browser) {
   await ctx.close();
 }
 
+async function copyEventPictures() {
+  await mkdir(path.join(ASSETS, "events"), { recursive: true });
+  for (const name of EVENTS) {
+    try {
+      const res = await fetch(`${SITE}/og/${name}.jpg`);
+      const type = res.headers.get("content-type") || "";
+      if (!res.ok || !type.startsWith("image/")) throw new Error(`${res.status} ${type}`);
+      await writeFile(path.join(ASSETS, "events", `${name}.jpg`), Buffer.from(await res.arrayBuffer()));
+      console.log(`✓ events/${name}.jpg`);
+    } catch (err) {
+      // Keep last week's copy rather than failing the whole refresh.
+      console.warn(`! events/${name}.jpg not updated: ${err.message}`);
+    }
+  }
+}
+
 async function stampReadme(dateText) {
   const md = await readFile(README, "utf8");
   const next = md.replace(/(<!--captured-->)[\s\S]*?(<!--\/captured-->)/, `$1${dateText}$2`);
@@ -183,6 +208,7 @@ try {
   await renderBanner(browser);
   await renderPreview(browser, `CAPTURED ${dateText.toUpperCase()}`);
   await renderPages(browser);
+  await copyEventPictures();
   await stampReadme(dateText);
 } finally {
   await browser.close();

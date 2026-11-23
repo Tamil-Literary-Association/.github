@@ -66,43 +66,43 @@
 <table>
   <tr>
     <td width="33%" align="center" valign="top">
-      <a href="https://tlauom.com/events/thamilaruvi"><img src="https://tlauom.com/og/thamilaruvi.jpg" alt="Tamilaruvi" width="100%" /></a>
+      <a href="https://tlauom.com/events/thamilaruvi"><img src="https://raw.githubusercontent.com/Tamil-Literary-Association/.github/main/profile/assets/events/thamilaruvi.jpg" alt="Tamilaruvi" width="100%" /></a>
       <br /><b>தமிழருவி</b><br /><sub>Our annual arts festival, held in Colombo</sub>
     </td>
     <td width="33%" align="center" valign="top">
-      <a href="https://tlauom.com/events/sotkanai"><img src="https://tlauom.com/og/sotkanai.jpg" alt="Sorkanai" width="100%" /></a>
+      <a href="https://tlauom.com/events/sotkanai"><img src="https://raw.githubusercontent.com/Tamil-Literary-Association/.github/main/profile/assets/events/sotkanai.jpg" alt="Sorkanai" width="100%" /></a>
       <br /><b>சொற்கணை</b><br /><sub>Island-wide debate championship</sub>
     </td>
     <td width="33%" align="center" valign="top">
-      <a href="https://tlauom.com/events/brammam"><img src="https://tlauom.com/og/brammam.jpg" alt="Brammam" width="100%" /></a>
+      <a href="https://tlauom.com/events/brammam"><img src="https://raw.githubusercontent.com/Tamil-Literary-Association/.github/main/profile/assets/events/brammam.jpg" alt="Brammam" width="100%" /></a>
       <br /><b>பிரம்மம்</b><br /><sub>Online talent competitions for students everywhere</sub>
     </td>
   </tr>
   <tr>
     <td width="33%" align="center" valign="top">
-      <a href="https://tlauom.com/ideathon"><img src="https://tlauom.com/og/ideathon.jpg" alt="Nirali" width="100%" /></a>
+      <a href="https://tlauom.com/ideathon"><img src="https://raw.githubusercontent.com/Tamil-Literary-Association/.github/main/profile/assets/events/ideathon.jpg" alt="Nirali" width="100%" /></a>
       <br /><b>நிரலி</b><br /><sub>All-island innovation competition for school students</sub>
     </td>
     <td width="33%" align="center" valign="top">
-      <a href="https://tlauom.com/events/jeevanathi"><img src="https://tlauom.com/og/jeevanathi.jpg" alt="Jeevanathi" width="100%" /></a>
+      <a href="https://tlauom.com/events/jeevanathi"><img src="https://raw.githubusercontent.com/Tamil-Literary-Association/.github/main/profile/assets/events/jeevanathi.jpg" alt="Jeevanathi" width="100%" /></a>
       <br /><b>ஜீவநதி</b><br /><sub>Our community help journey</sub>
     </td>
     <td width="33%" align="center" valign="top">
-      <a href="https://tlauom.com/events/blood-donation"><img src="https://tlauom.com/og/blood-donation.jpg" alt="Blood donation camp" width="100%" /></a>
+      <a href="https://tlauom.com/events/blood-donation"><img src="https://raw.githubusercontent.com/Tamil-Literary-Association/.github/main/profile/assets/events/blood-donation.jpg" alt="Blood donation camp" width="100%" /></a>
       <br /><b>இரத்ததான முகாம்</b><br /><sub>Yearly blood donation camp</sub>
     </td>
   </tr>
   <tr>
     <td width="33%" align="center" valign="top">
-      <a href="https://tlauom.com/events/vani-villa"><img src="https://tlauom.com/og/vani-villa.jpg" alt="Vani Vizha" width="100%" /></a>
+      <a href="https://tlauom.com/events/vani-villa"><img src="https://raw.githubusercontent.com/Tamil-Literary-Association/.github/main/profile/assets/events/vani-villa.jpg" alt="Vani Vizha" width="100%" /></a>
       <br /><b>வாணி விழா</b><br /><sub>Navaratri evening of music and dance</sub>
     </td>
     <td width="33%" align="center" valign="top">
-      <a href="https://tlauom.com/events/thaipongal"><img src="https://tlauom.com/og/thaipongal.jpg" alt="Thai Pongal" width="100%" /></a>
+      <a href="https://tlauom.com/events/thaipongal"><img src="https://raw.githubusercontent.com/Tamil-Literary-Association/.github/main/profile/assets/events/thaipongal.jpg" alt="Thai Pongal" width="100%" /></a>
       <br /><b>தைப்பொங்கல்</b><br /><sub>Pongal on campus with traditional games</sub>
     </td>
     <td width="33%" align="center" valign="top">
-      <a href="https://tlauom.com/events/aramiyam"><img src="https://tlauom.com/og/aramiyam.jpg" alt="Aramiyam" width="100%" /></a>
+      <a href="https://tlauom.com/events/aramiyam"><img src="https://raw.githubusercontent.com/Tamil-Literary-Association/.github/main/profile/assets/events/aramiyam.jpg" alt="Aramiyam" width="100%" /></a>
       <br /><b>அரமியம்</b><br /><sub>Career guidance for final-year students</sub>
     </td>
   </tr>
